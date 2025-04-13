@@ -1,51 +1,130 @@
 <!---
 {
-  "depends_on": [],
+  "id": "77bccff1-2503-4d3c-8964-6f717ea89b57",
+  "depends_on": ["3ee0acd9-0f99-4423-b4f3-a0ca84a16422"],
   "author": "Stephan Bökelmann",
-  "first_used": "2025-03-17",
-  "keywords": ["learning", "exercises", "education", "practice"]
+  "first_used": "2025-04-13",
+  "keywords": ["HTML", "semantic tags", "vim", "structure", "best practices"]
 }
 --->
 
-# Learning Through Exercises
+# Structuring HTML with Semantic Tags
 
-## Introduction
-Learning by doing is one of the most effective methods to acquire new knowledge and skills. Rather than passively consuming information, actively engaging in problem-solving fosters deeper understanding and long-term retention. By working through structured exercises, students can grasp complex concepts in a more intuitive and applicable way. This approach is particularly beneficial in technical fields like programming, mathematics, and engineering.
+> In this exercise you will learn how to use semantic HTML tags such as `<article>`, `<section>`, `<nav>`, and `<footer>` to give meaningful structure to a web page. Furthermore we will explore how these tags improve clarity, maintainability, and accessibility.
+
+### Introduction
+
+Modern web development emphasizes not just what a page looks like, but how its structure conveys meaning. Semantic HTML tags are specially designed elements that describe their content clearly to both browsers and developers. Unlike generic `<div>` or `<span>` tags, semantic tags like `<nav>`, `<section>`, `<article>`, and `<footer>` signal the role of their content, making your markup more readable and easier to work with.
+
+These tags are particularly useful for documentation, blogs, portfolios, and any content that benefits from logical, well-defined sections. For example, a `<nav>` tag defines a navigation menu, `<section>` defines thematic groups of content, `<article>` is suited for self-contained entries like posts or reports, and `<footer>` usually holds contact info, copyrights, or links.
+
+Using semantic HTML also helps search engines and assistive technologies better interpret your content. It's not just best practice — it's essential for building inclusive and professional web pages.
 
 ### Further Readings and Other Sources
-- [The Importance of Practice in Learning](https://www.sciencedirect.com/science/article/pii/S036013151300062X)
-- "The Art of Learning" by Josh Waitzkin
-- [How to Learn Effectively: 5 Key Strategies](https://www.edutopia.org/article/5-research-backed-learning-strategies)
+
+- [MDN Web Docs: HTML Semantics](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
+- [HTML5 Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
+- [Accessible Web Design Principles](https://webaim.org/techniques/semanticstructure/)
+
+---
 
 ## Tasks
-1. **Write a Summary**: Summarize the concept of "learning by doing" in 3-5 sentences.
-2. **Example Identification**: List three examples from your own experience where learning through exercises helped you understand a topic better.
-3. **Create an Exercise**: Design a simple exercise for a topic of your choice that someone else could use to practice.
-4. **Follow an Exercise**: Find an online tutorial that includes exercises and complete at least two of them.
-5. **Modify an Existing Exercise**: Take a basic problem from a textbook or online course and modify it to make it slightly more challenging.
-6. **Pair Learning**: Explain a concept to a partner and guide them through an exercise without giving direct answers.
-7. **Review Mistakes**: Look at an exercise you've previously completed incorrectly. Identify why the mistake happened and how to prevent it in the future.
-8. **Time Challenge**: Set a timer for 10 minutes and try to solve as many simple exercises as possible on a given topic.
-9. **Self-Assessment**: Create a checklist to evaluate your own performance in completing exercises effectively.
-10. **Reflect on Progress**: Write a short paragraph on how this structured approach to exercises has influenced your learning.
 
-<details>
-  <summary>Tip for Task 5</summary>
-  Try making small adjustments first, such as increasing the difficulty slightly or adding an extra constraint.
-</details>
+### Task 1: Create a New HTML File with a Basic Structure
+
+In this task, you'll set up a basic HTML5 document structure. This foundation will support the semantic elements you'll add in later tasks.
+
+1. Open your terminal and create a new file with vim:
+   ```sh
+   vim semantic_layout.html
+   ```
+2. Press `i` to enter INSERT mode and begin editing the file.
+
+3. Start with this basic HTML structure:
+   ```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>My Semantic Page</title>
+   </head>
+   <body>
+   </body>
+   </html>
+   ```
+4. Save and exit with `:wq`.
+
+### Task 2: Add a Navigation Section
+
+Now let’s define a navigation menu using the `<nav>` tag. This tag semantically identifies the section of the page meant for navigating between parts of the site.
+
+1. Reopen the file and add the following inside the `<body>`:
+   ```html
+   <nav>
+       <ul>
+           <li><a href="#home">Home</a></li>
+           <li><a href="#articles">Articles</a></li>
+           <li><a href="#contact">Contact</a></li>
+       </ul>
+   </nav>
+   ```
+2. Save and preview your file in a browser.
+
+### Task 3: Add Main Content Sections
+
+Here, you’ll introduce two semantic tags: `<section>` for grouping related content and `<article>` for self-contained entries. This structure is ideal for blog posts or distinct topics.
+
+1. Below the `<nav>`, add:
+   ```html
+   <section id="home">
+       <h1>Welcome to My Page</h1>
+       <p>This is the homepage section where we greet our visitors.</p>
+   </section>
+
+   <section id="articles">
+       <article>
+           <h2>First Blog Post</h2>
+           <p>This article explains how semantic HTML improves structure and accessibility.</p>
+       </article>
+
+       <article>
+           <h2>Second Blog Post</h2>
+           <p>This entry explores best practices for organizing web content using tags.</p>
+       </article>
+   </section>
+   ```
+
+### Task 4: Add a Footer
+
+Let’s add a `<footer>` to provide standard page-end content such as legal notices or author credits. This is a great place to include meta-information about the document.
+
+1. Append the following to the bottom of `<body>`:
+   ```html
+   <footer>
+       <p>&copy; 2025 by Your Name. All rights reserved.</p>
+   </footer>
+   ```
+2. Save and exit vim with `:wq`.
+
+### Task 5: Explore and Modify the Structure
+
+Finally, experiment with what you've built. This task encourages you to interact with the layout by adding content and testing how the structure behaves in the browser.
+
+1. Open the file in a browser to view the layout.
+2. Try changing the text inside each section and adding another `<article>`.
+3. Optionally add `id` attributes to each tag and link them via anchors in your `<nav>` list for quick navigation.
+
+---
 
 ## Questions
-1. What are the main benefits of learning through exercises compared to passive learning?
-2. How do exercises improve long-term retention?
-3. Can you think of a subject where learning through exercises might be less effective? Why?
-4. What role does feedback play in learning through exercises?
-5. How can self-designed exercises improve understanding?
-6. Why is it beneficial to review past mistakes in exercises?
-7. How does explaining a concept to someone else reinforce your own understanding?
-8. What strategies can you use to stay motivated when practicing with exercises?
-9. How can timed challenges contribute to learning efficiency?
-10. How do exercises help bridge the gap between theory and practical application?
+
+1. What is the purpose of using a `<nav>` tag instead of a generic `<div>`?
+2. How does a `<section>` differ from an `<article>` in terms of content structure?
+3. What information is typically included in a `<footer>` tag?
+4. Why is semantic HTML beneficial for accessibility and SEO?
+5. Can multiple `<article>` tags be placed inside one `<section>`? Why or why not?
+
+---
 
 ## Advice
-Practice consistently and seek out diverse exercises that challenge different aspects of a topic. Combine exercises with reflection and feedback to maximize your learning efficiency. Don't hesitate to adapt exercises to fit your own needs and ensure that you're actively engaging with the material, rather than just going through the motions.
 
+As you continue building web pages, prioritize structure and clarity. Semantic tags are more than just labels — they form the blueprint of readable and maintainable HTML. They make it easier to update content, enhance accessibility for screen readers, and improve SEO. Think of each semantic tag as a signpost for both people and machines navigating your site.
